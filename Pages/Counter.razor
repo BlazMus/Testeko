@@ -1,0 +1,40 @@
+﻿@page  "/counter"
+@inject IToastService toastService
+
+<h1>Counter</h1>
+
+<p>Hur gammal är Alexander?: @currentCount</p>
+
+<button class="btn btn-primary" @onclick="IncrementCount">Info Toast</button>
+
+@code {
+	private int currentCount = 0;
+
+	private void IncrementCount()
+	{
+		currentCount++;
+		if (currentCount == 3)
+		{
+		toastService.ShowError("Fel han är inte 3 år fattar du väl!");
+
+		}
+		if (currentCount == 5)
+		{
+		toastService.ShowInfo("Nej inte det heller...");
+
+		}
+		if (currentCount == 8)
+		{
+		toastService.ShowWarning("Det hade varit rätt för ett tag sedan...");
+
+		}
+		if (currentCount == 9)
+		{
+		toastService.ShowSuccess("RÄTT GISSAT!!! Han är " + 9 + " år, och väldigt bra på att bygga höghus i Fortnite.");
+
+		}
+
+	}
+
+}
+   
