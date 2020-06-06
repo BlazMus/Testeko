@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Blazor.Hosting;
 using Microsoft.Extensions.DependencyInjection;
 using Blazored.Toast;
 
-namespace Iteko
+namespace Testeko
 {
 	public class Program
 	{
